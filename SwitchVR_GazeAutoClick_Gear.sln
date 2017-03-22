@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchVR_GazeAutoClick_Gear", "SwitchVR_GazeAutoClick_Gear.csproj", "{1097D36B-7579-6122-FBE7-4A275C6353AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchVR_GazeAutoClick_Gear.Editor", "SwitchVR_GazeAutoClick_Gear.Editor.csproj", "{20537B42-6E25-03F0-F78E-AE134D0B8812}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1097D36B-7579-6122-FBE7-4A275C6353AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1097D36B-7579-6122-FBE7-4A275C6353AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1097D36B-7579-6122-FBE7-4A275C6353AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1097D36B-7579-6122-FBE7-4A275C6353AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20537B42-6E25-03F0-F78E-AE134D0B8812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20537B42-6E25-03F0-F78E-AE134D0B8812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20537B42-6E25-03F0-F78E-AE134D0B8812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20537B42-6E25-03F0-F78E-AE134D0B8812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
