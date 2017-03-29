@@ -798,7 +798,10 @@ namespace UnityEngine.EventSystems
                 ExecuteEvents.Execute(pointerEvent.pointerDrag, pointerEvent, ExecuteEvents.dragHandler);
             }
         }
-       
+
+        float _threshold = 0.25f;
+        bool pressedThreshold = false;
+        float clickTime = 0;
         /// <summary>
         /// Get state of button corresponding to gaze pointer
         /// </summary>
@@ -812,12 +815,25 @@ namespace UnityEngine.EventSystems
             pressed |= Input.GetMouseButtonDown(0);
             released |= Input.GetMouseButtonUp(0);
 #endif
+            if (pressed)
+            {
+                if( (Time.time - clickTime) > _threshold)
+                {
+                    Debug.Log("single click");
+                    pressedThreshold = false;
+                } else {
+                    Debug.Log("double click");
+                    pressedThreshold = true;
+                    pressed = false;
+                }
+                clickTime = Time.time;
+            }
 
             if (pressed && released)
                 return PointerEventData.FramePressState.PressedAndReleased;
             if (pressed)
                 return PointerEventData.FramePressState.Pressed;
-            if (released)
+            if (released && pressedThreshold == false)
                 return PointerEventData.FramePressState.Released;
             return PointerEventData.FramePressState.NotChanged;
         }
