@@ -11,7 +11,7 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class SwitchVRPlatform : Editor
 {
-    [MenuItem("VRPlayer/Export Gear Scene")]
+    [MenuItem("GearVR/Export Gear Scene")]
     static public void ExportGearScene()
     {
         // 지금의 장면이 편집중인 경우 다른 장면을 열 때 변경이 파기되어 버리기 때문에, 세이브 해 두는 
@@ -25,8 +25,8 @@ public class SwitchVRPlatform : Editor
         GameObject[] rootObj = EditorSceneManager.GetActiveScene().GetRootGameObjects();
 
         string[] prefabName = {
-            "Assets/Prefab/EventSystem_gear.prefab",
-            "Assets/Prefab/CameraManager_gear.prefab",
+            "Assets/prefab_platform/EventSystem_gear.prefab",
+            "Assets/prefab_platform/CameraManager_gear.prefab",
             "Assets/OVRGazeUI/Prefab/GazePointerRing.prefab",
             };
 
