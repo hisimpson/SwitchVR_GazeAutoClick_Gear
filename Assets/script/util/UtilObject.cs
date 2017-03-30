@@ -197,4 +197,17 @@ public static class UtilObject
         }
         return null;
     }
+
+    static public GameObject FindChild(GameObject parent, string childName, bool showLog)
+    {
+        Transform childTrans = parent.transform.FindChild(childName);
+        if (childTrans == null)
+        {
+            if (showLog == true)
+                Debug.LogErrorFormat("UtilObject.FindChild not found {0}", childName);
+            return null;
+        }
+
+        return childTrans.gameObject;
+    }
 }
